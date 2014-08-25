@@ -1,0 +1,29 @@
+.account{
+	border: 1px solid gray;
+}
+
+.accountContent{
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.accountTable1{
+	width: 80%;
+}
+
+.icon{
+	width:5%;
+	height:5%;
+}
+
+.accountNav{
+	border: 1px solid green;
+	background: #4e4f4b;
+	color: #FFFFFF;
+}
+
+/* Custom Game Setup */
+
+.gamesetup{
+	border:1px solid gray;
+}
