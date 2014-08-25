@@ -37,10 +37,6 @@
   <div class="mini-navbar mini-navbar-dark hidden-xs">
     <div class="container">
     <div class="col-sm-12">
-      <a href="#" class="first-child"><i class="fa fa-envelope"></i> Email<span class="hidden-sm">: contact@example.com</span></a>
-      <span class="phone">
-      <i class="fa fa-phone-square"></i> Tel.: +0 (000) 000-00-00
-      </span>
       <% if user_signed_in? %>
         <%= link_to "Log out", destroy_user_session_path, method: :delete %>
       <% else %>
@@ -48,17 +44,6 @@
         <%= link_to "<i class='fa fa-arrow-circle-down'></i> Sign up".html_safe, new_user_registration_path, class: "pull-right" %>
        <% end %>
 
-      <a href="#" class="pull-right" id="nav-search"><i class="fa fa-search"></i> Search</a>
-      <a href="#" class="pull-right hidden" id="nav-search-close"><i class="fa fa-times"></i></a>
-      <!-- Search Form -->
-      <form class="pull-right hidden" role="search" id="nav-search-form">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search">
-        <span class="input-group-btn">
-          <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-        </span>
-      </div>
-      </form>
     </div>
     </div>
   </div>
@@ -74,46 +59,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to "<i class='fa fa-th-large'></i> The Mosaic <span>Business Template</span>".html_safe , root_url, class: "navbar-brand" %>
+          <%= link_to "CouchMVP".html_safe , root_url, class: "navbar-brand" %>
         </div> <!-- / Navbar Header -->
     
     <!-- Navbar Links -->
         <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
       <li><%= link_to "Home", root_url, class: "bg-hover-color" %></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle bg-hover-color" data-toggle="dropdown">Pages <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-        <li><a href="about-us.html" class="bg-hover-color">About Us</a></li>
-        <li><a href="blog.html" class="bg-hover-color">Blog</a></li>
-        <li><a href="blog-post.html" class="bg-hover-color">Blog Post</a></li>
-        <li><a href="coming-soon.html" class="bg-hover-color">Coming Soon</a></li>
-        <li><a href="contact-us.html" class="bg-hover-color">Contact Us</a></li>
-        <li><a href="dummy.html" class="bg-hover-color">Dummy Page</a></li>
-        <li><a href="portfolio.html" class="bg-hover-color">Portfolio</a></li>
-        <li><a href="portfolio-item.html" class="bg-hover-color">Portfolio Item</a></li>
-        <li><a href="pricing-table.html" class="bg-hover-color">Pricing Table</a></li>
-        <li><a href="responsive-video.html" class="bg-hover-color">Responsive Video</a></li>
-        <li><a href="services.html" class="bg-hover-color">Services</a></li>
-        <li><a href="sign-in.html" class="bg-hover-color">Sign In</a></li>
-        <li><a href="sign-up.html" class="bg-hover-color">Sign Up</a></li>
-        <li><a href="404-error.html" class="bg-hover-color">404 Error Page</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle bg-hover-color" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-        <li><a href="portfolio.html" class="bg-hover-color">Portfolio</a></li>
-        <li><a href="portfolio-item.html" class="bg-hover-color">Portfolio Item</a></li>
-        </ul>
-      </li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle bg-hover-color" data-toggle="dropdown">Blog <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-        <li><a href="blog.html" class="bg-hover-color">Blog</a></li>
-        <li><a href="blog-post.html" class="bg-hover-color">Blog Post</a></li>
-        </ul>
-      </li>
       </ul>
       
       <!-- Search Form (xs) -->
@@ -141,11 +93,7 @@
         <h3 class="text-color"><span class="border-color">Contact Us</span></h3>
         <div class="content">
         <p>
-        San Francisco, CA 94101<br />
-        1987 Lincoln Street<br />
-        Phone: +0 000 000 00 00<br />
-        Fax: +0 000 000 00 00<br />
-        Email: <a href="#">admin@mysite.com</a>
+        Email: <a href="#">support@couchmvp.co</a>
         </p>
         </div>
       </div>
@@ -155,12 +103,9 @@
         <div class="content social">
         <p>Stay in touch with us:</p>
         <ul class="list-inline">
-          <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://twitter.com/CouchMVP" class="twitter"><i class="fa fa-twitter"></i></a></li>
         <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
         <li><a href="#" class="github"><i class="fa fa-github"></i></a></li>
-        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-        <li><a href="#" class="vk"><i class="fa fa-vk"></i></a></li>
         <li><a href="#" class="plus"><i class="fa fa-google-plus"></i></a></li>
         </ul>
         <div class="clearfix"></div>
@@ -170,7 +115,7 @@
         <div class="col-sm-4">
         <h3 class="text-color"><span>Subscribe</span></h3>
         <div class="content">
-          <p>Enter your e-mail below to subscribe to our free newsletter.<br />We promise not to bother you often!</p>
+            <p>Enter your e-mail below to subscribe to updates about CouchMVP!</p>
         <form class="form" role="form">
           <div class="row">
             <div class="col-sm-8">
@@ -195,72 +140,12 @@
     <!-- Copyrights -->
       <div class="row">
         <div class="col-sm-12">
-        <p>&copy; Matches 2013. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            <p>&copy; CouchMVP 2014.</p>
       </div>
       </div>
     </div>
   </footer>
   
-  <!-- Style Toggle -->
-  <div class="style-toggle text-left hidden-xs">
-    <i class="fa fa-gears style-toggle-btn"></i>
-    <div class="style-toggle-header text-center">
-      Navbar Type
-    </div>
-    <!-- Navbar Type -->
-    <div class="style-toggle-body text-left">
-      <div class="radio">
-        <label>
-        <input type="radio" name="navbar" id="opt-navbar-dark" value="opt-navbar-dark" checked>
-        Navbar Dark (default)
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-        <input type="radio" name="navbar" id="opt-navbar-white" value="opt-navbar-white">
-        Navbar White
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-        <input type="radio" name="navbar" id="opt-navbar-mixed" value="opt-navbar-mixed">
-        Navbar Mixed
-        </label>
-      </div>
-    </div>
-    <!-- Color Styles-->
-    <div class="style-toggle-header text-center">
-      Color Styles
-    </div>
-    <div class="style-toggle-body text-center">
-    <ul class="colors list-inline">
-      <li class="green"></li>
-      <li class="blue"></li>
-      <li class="orange"></li>
-      <li class="red"></li>
-    </ul>
-    </div>
-    <!-- Footer Type -->
-    <div class="style-toggle-header text-center">
-      Footer Type
-    </div>
-    <div class="style-toggle-body text-left">
-      <div class="radio">
-        <label>
-        <input type="radio" name="footer" id="opt-footer-dark" value="opt-footer-dark" checked>
-        Footer Dark (default)
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-        <input type="radio" name="footer" id="opt-footer-white" value="opt-footer-white">
-        Footer White
-        </label>
-      </div>
-    <hr>
-    <a href="theme-faq.html"><i class="fa fa-question-circle"></i> Using color schemes on a production site.</a>
-    </div>
-  </div>
   
     <!-- Bootstrap core JavaScript
     ================================================== -->
