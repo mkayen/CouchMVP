@@ -33,21 +33,6 @@
 
   <body class="body-green">
   
-  <!-- Extra Bar -->
-  <div class="mini-navbar mini-navbar-dark hidden-xs">
-    <div class="container">
-    <div class="col-sm-12">
-      <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "pull-right"  %>
-      <% else %>
-        <%= link_to "<i class='fa fa-sign-in'></i> Sign in".html_safe, new_user_session_path, class: "pull-right" %>
-        <%= link_to "<i class='fa fa-arrow-circle-down'></i> Sign up".html_safe, new_user_registration_path, class: "pull-right" %>
-       <% end %>
-
-    </div>
-    </div>
-  </div>
-  
     <div class="navbar navbar-dark navbar-static-top" role="navigation">
       <div class="container">
     
@@ -62,11 +47,17 @@
           <%= link_to "CouchMVP".html_safe , root_url, class: "navbar-brand" %>
         </div> <!-- / Navbar Header -->
     
-    <!-- Navbar Links -->
+      <!-- Navbar Links -->
         <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-right">
-      <li><%= link_to "Home", root_url, class: "bg-hover-color" %></li>
-      </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home", root_url, class: "bg-hover-color" %></li>
+            <% if user_signed_in? %>
+              <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "bg-hover-color" %></li>
+            <% else %>
+              <li><%= link_to "Sign in", new_user_session_path, class: "bg-hover-color" %></li>
+              <li><%= link_to "Sign up", new_user_registration_path, class: "bg-hover-color" %></li>
+            <% end %>
+          </ul>
       
       <!-- Search Form (xs) -->
       <form class="navbar-form navbar-left visible-xs" role="search">
