@@ -718,7 +718,7 @@ footer h3 > span {
 	margin-top: -20px;
 }
 .jumbotron.first {
-	background: url(../img/football.jpg) no-repeat center bottom;
+	background: url(/images/football.jpg) no-repeat center bottom;
 	background-size: cover;
 }
 .jumbotron.second {
