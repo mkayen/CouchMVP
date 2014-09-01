@@ -1,4 +1,105 @@
-<div class="container">
-	<h1>Home</h1>
-	<p>No need to Authenticate here.</p>
-</div>
+	<!-- Wrapper -->
+	<div class="wrapper">
+	
+	  <!-- Jumbotron -->
+	  <div class="main-slideshow">
+	    <div id="main-slideshow" class="carousel slide" data-ride="carousel">
+		  <div class="carousel-inner">
+		    <!-- Slide No 1 -->
+		    <div class="item active">
+			  <div class="jumbotron first">
+				<div class="container">
+				  <div class="row">
+					<div class="col-sm-6">
+					  <h1 class="animated slideInLeft">Beautiful Theme<br />You Can Tune Yourself</h1>
+					  <p class="lead animated slideInLeft delay-1">An accurate and clean template for business projects.</p>
+					  <%= link_to "Sign up", new_user_registration_path, class: "btn btn-color animated slideInLeft delay-2" %>
+					</div>
+					<!--<div class="col-sm-6 hidden-xs">
+					  <img class="img-responsive" src="img/imac.png" alt="...">
+					</div>-->
+				  </div>
+				</div>
+			  </div>
+			</div> 
+		  </div>
+		  <!-- Controls -->
+		  <a class="slideshow-arrow slideshow-arrow-prev bg-hover-color" href="#main-slideshow" data-slide="prev">
+		    <i class="fa fa-angle-left"></i>
+		  </a>
+		  <a class="slideshow-arrow slideshow-arrow-next bg-hover-color" href="#main-slideshow" data-slide="next">
+		    <i class="fa fa-angle-right"></i>
+		  </a>
+		</div>
+	  </div>
+
+<div class = "container">	
+
+		<!-- Features -->
+		<h2 class="headline text-color">
+		  <span class="border-color">Main Features</span>
+		</h2>
+		<div class="row features">
+		  <div class="col-sm-6">
+			<h3 class="primary-font first-child">Easy to adjust for your needs with multiple color combinations.</h3>
+			<p class="text-muted">
+			  Nulla pretium libero interdum, tempus lorem non, rutrum diam. Quisque pellentesque diam sed pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+			</p>
+		  </div>
+		  <div class="col-sm-6">
+		    <img src="images/imac.png" class="img-responsive" alt="...">			
+		  </div>
+		</div> <!-- / .row -->
+		<div class="divider"></div>
+		<div class="row features last">
+		  <div class="col-sm-6">
+		    <div class="border-bottom"><img src="images/browser-cut.png" class="img-responsive" alt="..."></div>
+		  </div>
+		  <div class="col-sm-6">
+			<h3 class="primary-font">Fifteen unique templates to take your site up and running in no time.</h3>
+			<p class="text-muted">
+			  Nulla pretium libero interdum, tempus lorem non, rutrum diam. Quisque pellentesque diam sed pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
+			</p>
+		  </div>
+		</div> <!-- / .row -->
+		
+		<!-- Blog Posts -->
+		<h2 class="headline text-color">
+		  <span class="border-color">Read Our Blog</span>
+		</h2>
+		<div class="row recent-blogs">
+		  <div class="col-sm-6">
+			<div class="recent-blog">
+			  <img src="images/photo-1.jpg" alt="...">
+			  <div class="recent-blog-desc">
+				<h3 class="primary-font">
+				  <a href="blog-post.html">Sed lacinia suscipit lacus non sodales. Pellentesque lacinia ornare justo eu tincidunt. </a>
+				</h3>
+				<hr>
+				<p class="text-muted">by John Doe</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi lorem, elementum sed feugiat ac, pharetra lacinia mi. Integer iaculis risus sed quam vehicula, sit amet lacinia sem rutrum. Integer ligula orci.</p>
+                <%= link_to "Read More...", root_url, class: "btn btn-lg btn-color" %>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-sm-6">
+			<div class="recent-blog">
+			  <img src="images/photo-2.jpg" alt="...">
+			  <div class="recent-blog-desc">
+				<h3 class="primary-font">
+				  <a href="blog-post.html">Nulla pretium libero interdum, tempus lorem non, rutrum diam. Lorem ipsum dolor sit amet.</a>
+				</h3>
+				<hr>
+				<p class="text-muted">by John Doe</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nisi lorem, elementum sed feugiat ac, pharetra lacinia mi. Integer iaculis risus sed quam vehicula, sit amet lacinia sem rutrum. Integer ligula orci.</p>
+                <%= link_to "Read More...", root_url, class: "btn btn-lg btn-color" %>
+			  </div>
+			</div>
+		  </div>
+		</div> <!-- / .row -->
+		
+	  </div> <!-- / .container -->
+	  
+	</div> <!-- / .wrapper -->
+
+</div><!-- / .container -->
