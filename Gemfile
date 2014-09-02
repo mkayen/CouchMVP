@@ -18,6 +18,8 @@ group :production do
      gem 'rails_12factor'
 end
 
+gem 'unicorn'
+
 ### END OF MAX'S GEMS ###
 
 gem 'jquery-rails'
