@@ -1,0 +1,6 @@
+
+<ul>
+<% @players.each do |player| %>
+    <li>  <b><%= player.position %></b> (<%= player.depth %>) - <%= player.first_name %> <%= player.last_name %> </li>
+<% end %>
+</ul>
