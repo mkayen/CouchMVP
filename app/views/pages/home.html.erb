@@ -1,3 +1,76 @@
+<!--- The Logic of the home page is that it changes -->
+<!--  depending on whether you are logged in or not -->
+
+<% if user_signed_in? %>
+
+	<!-- Wrapper -->
+	<div class="wrapper">
+	
+	  <!-- Topic Header -->
+	  <div class="topic">
+	    <div class="container">
+		  <div class="row">
+		    <div class="col-sm-4">
+		      <h3 class="primary-font">Start Game</h3>
+		    </div>
+		    <div class="col-sm-8">
+		      <ol class="breadcrumb pull-right hidden-xs">
+		        <li><a href="#">Home</a></li>
+		        <li class="active">Start Gane</li>
+		      </ol>
+		    </div>
+	      </div>
+		</div>
+	  </div>
+	  
+	  <div class="container">
+	    <div class="row">
+		  <div class="col-sm-6 col-sm-offset-3">
+			<div class="sign-form">
+			  <h3 class="first-child">Start Game</h3>
+			  <hr>
+
+<!-- Here is the important Code for the Starting Game Form -->
+
+			  <form role="form">
+				<div class="form-group">
+				  <select class = "form-control">
+				  	<option label = "League">
+				  	<option>NFL</option>
+				  </select>
+				</div>
+				<div class="form-group">
+				  	<select class = "form-control">
+				  		<option label = "Team">
+				  			<option>NFL Team #1</option>
+				  			<option>NFL Team #2 (etc.)</option>
+				  	</select>
+				</div>
+				<div class="form-group">
+				  	<select class = "form-control">
+				  		<option label = "Game">
+				  			<option>Week 1 - home @ away 1:00PM EST</option>
+				  			<option>Week 2 - away @ home 1:00PM EST</option>
+				  			<option>Week 3 - etc.</option>
+				  	</select>
+				</div>
+				<div class="form-group">
+				  <input type="text" class="form-control" id="team" placeholder="Opponent" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter Your Opponent's username here" data-original-title="Opponent">
+				</div>
+				<button type="submit" class="btn btn-color">Start Game</button>
+			  </form>
+
+<!-- Form End -->
+
+			</div>
+		  </div>
+		</div> <!-- / .row -->
+	  </div> <!-- / .container -->
+	  
+	</div> <!-- / .wrapper -->
+
+<% else %>
+
 	<!-- Wrapper -->
 	<div class="wrapper">
 	
@@ -103,3 +176,5 @@
 	</div> <!-- / .wrapper -->
 
 </div><!-- / .container -->
+
+<% end %>
