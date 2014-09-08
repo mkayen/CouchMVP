@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   get 'games/index'
-
   get 'teams/index'
 
   devise_for :users
   root 'pages#home'
   get 'pages/about'
+  get 'pages/gamestart'
   get 'users/sign_in'
 
   resources :teams
