@@ -3,6 +3,8 @@
 
 <% if user_signed_in? %>
 
+    <%=    current_user.email %> is signed in.
+
 	<!-- Wrapper -->
 	<div class="wrapper">
 	
@@ -22,6 +24,11 @@
 	      </div>
 		</div>
 	  </div>
+            <%= form_for @matchup, url: "matchups/create" do |f| %>
+                <%= f.text_field :challenger %>
+                <%= f.text_field :challengee %>
+                <%= f.submit "Create" %>
+             <% end %>
 	  
 	  <div class="container">
 	    <div class="row">

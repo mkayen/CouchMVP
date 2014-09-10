@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+  get 'matchups/index'
+
+  get 'matchups/show'
+
+  get 'matchups/create'
+  post 'matchups/create'
+
   get 'games/index'
 
   get 'teams/index'
@@ -10,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :teams
   resources :games
+  resources :matchups
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  challenger: MyText
+  challengee: MyText
+  game_id: 1
+  team: MyText
+  state: MyText
+
+two:
+  challenger: MyText
+  challengee: MyText
+  game_id: 1
+  team: MyText
+  state: MyText
