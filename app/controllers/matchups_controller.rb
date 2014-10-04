@@ -6,6 +6,11 @@ class MatchupsController < ApplicationController
   end
 
   def create
-      @x = params[:matchup][:challenger]
+    @matchup = Matchup.new
+    @matchup.team = params[:matchup][:team]
+  end
+
+
+  def lineup
   end
 end

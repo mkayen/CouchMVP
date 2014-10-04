@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   get 'matchups/create'
   post 'matchups/create'
 
+
+  get 'matchups/lineup'
+  post 'matchups/lineup'
+
   get 'games/index'
 
   get 'teams/index'

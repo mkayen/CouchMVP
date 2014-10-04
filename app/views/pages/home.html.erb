@@ -25,9 +25,10 @@
 		</div>
 	  </div>
             <%= form_for @matchup, url: "matchups/create" do |f| %>
-                <%= f.text_field :challenger %>
-                <%= f.text_field :challengee %>
-                <%= f.submit "Create" %>
+<!--                <%= f.text_field :challenger %>
+<%= f.text_field :challengee %> -->
+                <%= f.collection_select(:team, Team.all.order(:name), :id, :name) %>
+                <%= f.submit "Next" %>
              <% end %>
 	  
 	  <div class="container">
@@ -41,28 +42,11 @@
 
 			  <form role="form">
 				<div class="form-group">
-				  <select class = "form-control">
-				  	<option label = "League">
-				  	<option>NFL</option>
-				  </select>
-				</div>
-				<div class="form-group">
 				  	<select class = "form-control">
-				  		<option label = "Team">
-				  			<option>NFL Team #1</option>
-				  			<option>NFL Team #2 (etc.)</option>
+                        <% @teams.each do |team| %>
+                            <option><%=  team.name%> </option>
+                        <% end %>
 				  	</select>
-				</div>
-				<div class="form-group">
-				  	<select class = "form-control">
-				  		<option label = "Game">
-				  			<option>Week 1 - home @ away 1:00PM EST</option>
-				  			<option>Week 2 - away @ home 1:00PM EST</option>
-				  			<option>Week 3 - etc.</option>
-				  	</select>
-				</div>
-				<div class="form-group">
-				  <input type="text" class="form-control" id="team" placeholder="Opponent" data-toggle="popover" data-placement="left" data-trigger="focus" data-content="Enter Your Opponent's username here" data-original-title="Opponent">
 				</div>
 				<button type="submit" class="btn btn-color">Start Game</button>
 			  </form>
