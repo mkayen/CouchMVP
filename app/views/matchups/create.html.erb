@@ -4,7 +4,7 @@
             <%= form_for @matchup, url: "lineup" do |f| %>
 <!--                <%= f.text_field :challenger %>
 <%= f.text_field :challengee %> -->
-                <%= f.collection_select(:game_id, Game.all.where("home = ? OR away = ?", @x, @x).order(:game_time), :id, :display) %>
+                <%= f.collection_select(:game_id, Game.all.where("home = ? OR away = ?", @matchup.team, @matchup.team).order(:game_time), :id, :display) %>
                 <%= f.submit "Next" %>
              <% end %>
 
